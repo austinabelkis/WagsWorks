@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>WagsWorks · Be the show.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/wags-lightbulb.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Anton&family=Caveat+Brush&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Design tokens + component styles -->
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="components.css" />
+
+  <!-- React 18 + Babel standalone (dev build; swap for prod bundles when ready) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+          integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+          integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+          integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+          crossorigin="anonymous"></script>
+
+  <style>
+    body { margin: 0; }
+    #root { display: block; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Data (plain JS, no JSX needed) -->
+  <script src="data/events.js"></script>
+  <script src="data/brands.js"></script>
+  <script src="data/shows.js"></script>
+
+  <!-- Components (loaded in dependency order) -->
+  <script type="text/babel" data-presets="react" src="components/TweaksPanel.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/Button.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/Header.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/Hero.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/Marquee.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/LogoMarquee.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/PullQuote.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/SponsorshipBlock.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/EventCard.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/BrandStrip.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/ContactBlock.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/TeamPage.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/CalendarPage.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/SizzleReel.jsx"></script>
+  <script type="text/babel" data-presets="react" src="components/Footer.jsx"></script>
+
+  <!-- Main app -->
+  <script type="text/babel" data-presets="react" src="app.jsx"></script>
+</body>
+</html>

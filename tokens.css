@@ -1,0 +1,220 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   WAGSWORKS — tokens.css
+   All design tokens: colors, typography, spacing, borders, shadows, motion.
+   Drop in any page with: <link rel="stylesheet" href="tokens.css">
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Color · Ink & Paper (canonical Riso-Festival palette) ───────────── */
+  --ww-ink:           #181613;   /* near-black, slightly warm */
+  --ww-ink-soft:      #2b2723;
+  --ww-ink-muted:     #6b6259;
+  --ww-paper:         #f4ecd8;   /* cream — the poster-paper canvas */
+  --ww-paper-light:   #faf5e6;
+  --ww-paper-dark:    #e6d9bb;
+
+  /* ── Color · Riso accents ────────────────────────────────────────────── */
+  --ww-marigold:      #f0a000;
+  --ww-marigold-deep: #c47c00;
+  --ww-tomato:        #d6402d;
+  --ww-tomato-deep:   #a8281c;
+  --ww-pine:          #2d6e4e;
+  --ww-pine-deep:     #1f4f37;
+  --ww-sky:           #4a90c2;
+  --ww-bulb:          #ffd03b;
+
+  /* ── Color · Semantic tokens ─────────────────────────────────────────── */
+  --ww-fg-1:           var(--ww-ink);
+  --ww-fg-2:           var(--ww-ink-soft);
+  --ww-fg-3:           var(--ww-ink-muted);
+  --ww-fg-on-ink:      var(--ww-paper);
+  --ww-fg-on-accent:   var(--ww-ink);
+
+  --ww-bg-1:           var(--ww-paper);
+  --ww-bg-2:           var(--ww-paper-light);
+  --ww-bg-3:           var(--ww-paper-dark);
+  --ww-bg-inverse:     var(--ww-ink);
+
+  --ww-accent:         var(--ww-marigold);
+  --ww-accent-pressed: var(--ww-marigold-deep);
+  --ww-danger:         var(--ww-tomato);
+  --ww-success:        var(--ww-pine);
+
+  --ww-rule:           var(--ww-ink);
+  --ww-rule-soft:      rgba(24, 22, 19, 0.18);
+
+  /* ── Typography · Font stacks ────────────────────────────────────────── */
+  --ww-font-display: "Shrikhand", "Cooper Black", Georgia, serif;
+  --ww-font-stacker: "Anton", "Oswald", "Impact", sans-serif;
+  --ww-font-hand:    "Caveat Brush", "Marker Felt", cursive;
+  --ww-font-body:    "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ww-font-mono:    "DM Mono", "JetBrains Mono", "SF Mono", monospace;
+
+  /* ── Typography · Type scale ─────────────────────────────────────────── */
+  --ww-fs-marquee: clamp(56px, 10vw, 168px);
+  --ww-fs-h1:      clamp(40px, 6vw, 96px);
+  --ww-fs-h2:      clamp(32px, 4.4vw, 64px);
+  --ww-fs-h3:      clamp(24px, 2.8vw, 40px);
+  --ww-fs-h4:      22px;
+  --ww-fs-lede:    20px;
+  --ww-fs-body:    17px;
+  --ww-fs-small:   14px;
+  --ww-fs-micro:   12px;
+  --ww-fs-stamp:   11px;
+
+  --ww-lh-tight:   0.92;
+  --ww-lh-display: 1.02;
+  --ww-lh-snug:    1.18;
+  --ww-lh-body:    1.55;
+  --ww-lh-loose:   1.75;
+
+  --ww-track-stamp: 0.18em;
+  --ww-track-loose: 0.04em;
+  --ww-track-tight: -0.01em;
+
+  /* ── Spacing · 4px base ──────────────────────────────────────────────── */
+  --ww-s-1:  4px;
+  --ww-s-2:  8px;
+  --ww-s-3:  12px;
+  --ww-s-4:  16px;
+  --ww-s-5:  24px;
+  --ww-s-6:  32px;
+  --ww-s-7:  48px;
+  --ww-s-8:  64px;
+  --ww-s-9:  96px;
+  --ww-s-10: 128px;
+
+  /* ── Borders ─────────────────────────────────────────────────────────── */
+  --ww-rule-hair:  1px;
+  --ww-rule-thin:  2px;
+  --ww-rule-med:   3px;
+  --ww-rule-thick: 5px;
+  --ww-rule-slab:  8px;
+
+  /* ── Radii ────────────────────────────────────────────────────────────── */
+  --ww-r-0:    0;
+  --ww-r-1:    2px;
+  --ww-r-2:    4px;
+  --ww-r-pill: 999px;
+
+  /* ── Shadows · ink-offset (printed), not ambient ─────────────────────── */
+  --ww-shadow-tap:    2px 2px 0 var(--ww-ink);
+  --ww-shadow-press:  4px 4px 0 var(--ww-ink);
+  --ww-shadow-card:   6px 6px 0 var(--ww-ink);
+  --ww-shadow-poster: 10px 10px 0 var(--ww-tomato), 14px 14px 0 var(--ww-ink);
+
+  /* ── Motion ──────────────────────────────────────────────────────────── */
+  --ww-ease:      cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ww-ease-snap: cubic-bezier(0.5, 1.6, 0.4, 0.95);
+  --ww-dur-fast:  120ms;
+  --ww-dur:       200ms;
+  --ww-dur-slow:  360ms;
+}
+
+/* ── Base element styles ──────────────────────────────────────────────── */
+html, body {
+  background: var(--ww-bg-1);
+  color: var(--ww-fg-1);
+  font-family: var(--ww-font-body);
+  font-size: var(--ww-fs-body);
+  line-height: var(--ww-lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .ww-h1 {
+  font-family: var(--ww-font-display);
+  font-size: var(--ww-fs-h1);
+  line-height: var(--ww-lh-display);
+  color: var(--ww-fg-1);
+  margin: 0 0 var(--ww-s-5);
+}
+
+h2, .ww-h2 {
+  font-family: var(--ww-font-stacker);
+  font-size: var(--ww-fs-h2);
+  line-height: var(--ww-lh-display);
+  letter-spacing: var(--ww-track-tight);
+  text-transform: uppercase;
+  color: var(--ww-fg-1);
+  margin: 0 0 var(--ww-s-4);
+}
+
+h3, .ww-h3 {
+  font-family: var(--ww-font-display);
+  font-size: var(--ww-fs-h3);
+  line-height: var(--ww-lh-snug);
+  color: var(--ww-fg-1);
+  margin: 0 0 var(--ww-s-3);
+}
+
+h4, .ww-h4 {
+  font-family: var(--ww-font-body);
+  font-weight: 700;
+  font-size: var(--ww-fs-h4);
+  line-height: var(--ww-lh-snug);
+  color: var(--ww-fg-1);
+  margin: 0 0 var(--ww-s-2);
+}
+
+/* Stamp — tracked uppercase eyebrows, badges, dates */
+.ww-stamp {
+  font-family: var(--ww-font-body);
+  font-weight: 700;
+  font-size: var(--ww-fs-stamp);
+  letter-spacing: var(--ww-track-stamp);
+  text-transform: uppercase;
+  color: var(--ww-fg-2);
+}
+
+/* Hand — brushy aside, quotes, scribbled annotations */
+.ww-hand {
+  font-family: var(--ww-font-hand);
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: var(--ww-lh-snug);
+  color: var(--ww-tomato);
+}
+
+.ww-lede {
+  font-family: var(--ww-font-body);
+  font-size: var(--ww-fs-lede);
+  line-height: var(--ww-lh-snug);
+  color: var(--ww-fg-2);
+}
+
+p, .ww-p {
+  font-size: var(--ww-fs-body);
+  line-height: var(--ww-lh-body);
+  color: var(--ww-fg-1);
+  text-wrap: pretty;
+  margin: 0 0 var(--ww-s-4);
+}
+
+small, .ww-small { font-size: var(--ww-fs-small); color: var(--ww-fg-2); }
+
+code, kbd, .ww-mono {
+  font-family: var(--ww-font-mono);
+  font-size: 0.92em;
+}
+
+a {
+  color: var(--ww-fg-1);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--ww-marigold);
+  transition: text-decoration-color var(--ww-dur) var(--ww-ease);
+}
+a:hover { text-decoration-color: var(--ww-tomato); }
+
+hr {
+  border: 0;
+  border-top: var(--ww-rule-slab) solid var(--ww-ink);
+  margin: var(--ww-s-7) 0;
+}
+
+.ww-uppercase { text-transform: uppercase; letter-spacing: var(--ww-track-loose); }
+.ww-italic    { font-style: italic; }
+
+/* Period-stop accent — PUT. THAT COFFEE. DOWN. */
+.ww-stop { color: var(--ww-tomato); }
